@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>UG THE PEARL</title>
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        html, body {
+          height: 100%;
+          overflow-x: hidden;
+        }
+        body {
+          background: linear-gradient(to right, #cdb4db, #ffcbdd, #ffafcc, #bde0fe, #a2d2ff);
+          background-size: cover;
+          font-family: Arial, sans-serif;
+          
+          display: flex;
+          flex-direction: column;
+          
+         
+          
+        }
+        h1 {
+          margin: 5px 10px;
+          text-align: center;
+          font-size: 2.5em;
+          background-color: #ffafcc;;
+          color: white;
+          padding: 20px;
+          border-radius: 5px;
+          border: 1px solid #72b5f3;
+          box-shadow: 2px 2px 5px rgba(16, 172, 219, 0.192);
+          filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .img-fluid {
+          max-width: 100%;
+          height: 300px;
+          object-fit: cover;
+        }
+        header {
+          text-align: center;
+          border: 2px solid #ffafcc;
+          background: linear-gradient(to right, #ffafcc, #bde0fe);
+          color: black;
+          padding: 20px 0;
+          margin-top: 80px;
+        }
+        .container {
+          
+          width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          
+          border-radius: 8px;
+         
+        }
+        h2 {
+          text-align: center;
+          background-color: #ffafcc;
+          color: white;
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          font-size: 40px;
+          border: 1px solid #72b5f3;
+          filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        p {
+          line-height: 1.6;
+          
+        }
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        li {
+          margin: 10px 0;
+          padding: 10px;
+         
+          border-radius: 5px;
+        }
+        .img-container  {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          
+        }
+        .img-container img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 5px;
+          border: 1px solid #bde0fe;
+          padding:0.7px;
+          margin-top: 55px;
+         
+        }
+        .img-container img:hover {
+          transform: scale(2.2);
+          transition: transform 0.3s ease;
+
+        } 
+        .national-parks {
+          border: 1px solid #ffafcc;
+          background: linear-gradient(to right, #ffafcc, #bde0fe);
+          color: black;
+          padding: 10px;
+          width: 100%;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          box-shadow: 2px 2px 5px rgba(16, 172, 219, 0.192);
+         
+        }
+        .header-buttons {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-bottom: 20px;
+          position: fixed;
+          align-items: center;
+          gap: 5px; 
+          border: 1px solid #03045e;
+          margin-bottom: 20px;
+          flex-wrap: wrap;
+          top: 0px;
+          left: 0%;
+          width: 100%;
+          right: 0%;
+          border-radius: 5px;
+          box-shadow: 2px 2px 5px rgba(16, 172, 219, 0.192);
+          z-index: 1;
+          background: linear-gradient(to right, #ffafcc, #bde0fe);
+          padding: 10px;
+        }
+        .header-buttons button {
+          background-color: #0077b6;
+          color: white;
+          margin-right: 5px;
+          border: none;
+          padding: 10px 5px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
+          box-shadow: 2px 2px 5px rgba(16, 172, 219, 0.192);
+          filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+          
+          
+        }
+        .header-buttons button:hover {
+          background-color: #023e8a;
+          transform: scale(1.2);
+          transition: transform 0.3s ease;
+        }
+        .btn {
+          background-color: #0077b6;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s 
+          ease;
+          margin: 5px;
+          box-shadow: 2px 2px 5px rgba(16, 172, 219, 0.192);
+          filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+        }
+        .btn:hover {
+          background-color: #023e8a;
+          transform: scale(1.2);
+          transition: transform 0.3s ease;
+        }
+        .btn:active {
+          background-color: #03045e;
+        }
+        .header-buttons button:active {
+          background-color: #03045e;
+        }
+        .header-buttons button:focus {
+          outline: none;
+          box-shadow: 0 0 5px #0077b6, 0 0 10px #0077b6, 0 0 15px #0077b6;
+        }
+        .header-buttons button:disabled {
+          background-color: #90e0ef;
+          cursor: not-allowed;
+        }
+        h4 {
+          background-color: #ffafcc;
+          padding: 20px;
+          border-radius: 5px;
+          border: 1px solid #72b5f3;
+          box-shadow: 3px 5px 8px rgba(26, 28, 29, 0.267);
+        }
+        a:hover{
+          text-decoration: red;
+          color: #023e8a;
+
+          
+        }
+      </style>
+  </head>
+  <body>
+      <header>
+        <div class="header-buttons">
+          <button id="home">home</button>
+          <button id="explore">explore</button>
+          <button id="discover">discover</button>
+          <button id="contact">contact</button>
+        </div>
+        <section id ="content" style="text-align: center; padding: 20px; background-color: #ffafcc; color: white; margin-top: 80px;">
+          <p>Click a link to learn more about Uganda!</p>
+        </section>
+        <h1>WELCOME TO UGANDA</h1>
+        <img src="images/murc.jpeg" alt=""  width="100%" height="300px" class="img-fluid">
+        <p>Welcome to Uganda, the Pearl of Africa! Here you’ll discover lush green landscapes, majestic mountains, sparkling lakes, and incredible wildlife. From the mighty Nile River to the rare mountain gorillas, Uganda’s beauty is breathtaking. Get ready to experience vibrant culture, warm smiles, and unforgettable adventures in every direction! </p>
+      </header>
+      <div class="container">
+        <h2>Explore Uganda</h2>
+        <p>Uganda is a landlocked country in East Africa, known for its diverse wildlife, stunning landscapes, and rich cultural heritage. Here are some highlights:</p>
+        <ul>
+          <div class="national-parks">
+          
+          <li><strong>National Parks:</strong> Uganda is home to several national parks, including Bwindi Impenetrable National Park, Murchison Falls National Park, and Queen Elizabeth National Park.</li>
+          <p>Uganda’s national parks are some of the most stunning and diverse in Africa. Bwindi Impenetrable National Park is world-famous for mountain gorilla trekking, offering a rare chance to see these gentle giants in their natural habitat. Queen Elizabeth National Park boasts vast savannahs, tree-climbing lions, and the scenic Kazinga Channel teeming with hippos and crocodiles. Murchison Falls National Park showcases the dramatic power of the Nile as it thunders through a narrow gorge, surrounded by elephants, giraffes, and countless bird species. Kidepo Valley National Park, in Uganda’s remote northeast, is a true hidden gem with sweeping landscapes and rich wildlife, perfect for adventurous travelers. Lake Mburo National Park offers serene lakes, zebras, and antelopes in a more compact, peaceful setting. Each park reveals a different piece of Uganda’s incredible natural beauty, making the country a dream destination for nature lovers and wildlife enthusiasts.</p>
+          <div class="img-container">
+            <img src="images/park1.jpeg" alt="">
+            <img src="images/park2.jpeg" alt="">
+            <img src="images/mur.jpeg" alt="">
+            <img src="images/park3.jpeg" alt="">
+            <img src="images/park4.jpeg" alt="">
+            <img src="images/mur.jpeg" alt="">
+            <img src="images/park3.jpeg" alt="">
+            <img src="images/park4.jpeg" alt="">
+            <img src="images/park4.jpeg" alt="">
+            
+          </div>
+          <a href="https://ugandawildlife.org/"><button class="btn">More</button></a>
+        </div>
+
+        <div class="national-parks">
+          <li><strong>Wildlife:</strong> Uganda is famous for its mountain gorillas, chimpanzees, and a variety of other wildlife species.
+          </li>
+          <p>Uganda’s wildlife is incredibly rich and diverse, offering unforgettable encounters with nature. It is home to over 300 mammal species and 1,000 bird species. Visitors can track mountain gorillas in Bwindi, see chimpanzees in Kibale Forest, and spot lions, elephants, leopards, and buffaloes across the savannahs. Uganda’s rivers and lakes are filled with hippos, crocodiles, and a colorful variety of birds. In parks like Queen Elizabeth and Murchison Falls, game drives reveal herds of antelopes, giraffes, and even the rare shoebill stork. Uganda’s wildlife, both on land and water, creates a thrilling and magical experience for nature lovers.</p>
+          <div class="img-container">
+          <img src="images/wild1.jpeg" alt="">
+          <img src="images/wild2.jpeg" alt="">
+          <img src="images/wild3.jpeg" alt="">
+          <img src="images/wild4.jpeg" alt="">
+          <img src="images/wild5.jpeg" alt="">
+          <img src="images/wild3.jpeg" alt="">
+          <img src="images/wild3.jpeg" alt="">
+          <img src="images/wild4.jpeg" alt="">
+          <img src="images/wild4.jpeg" alt="">
+          
+          
+          </div>
+          <a href="https://ugandawildlife.org/"><button class="btn">More</button></a>
+        </div>
+    
+        <div class="national-parks">
+        
+          <li><strong>Cultural Diversity:</strong> The country is home to over 50 different
+          customs.
+          <p>Uganda’s cultural diversity is vibrant and deeply enriching. With over 50 ethnic groups, each with its own language, traditions, music, and dance, the country offers a colorful tapestry of cultures. From the proud Baganda in the central region to the Karimojong warriors of the northeast, every community has unique customs. Traditional ceremonies, storytelling, and crafts like bark cloth making and intricate beadwork keep ancient traditions alive. Uganda’s cultural festivals, such as the Imbalu circumcision ceremonies and Rwenzori cultural dances, celebrate unity and heritage. This rich diversity, combined with the warmth and hospitality of Ugandan people, makes cultural exploration here truly unforgettable</p>
+
+          <div class="img-container">
+            <img src="images/cul1.jpeg" alt="">
+            <img src="images/cul2.jpeg" alt="">
+            <img src="images/cul3.jpeg" alt="">
+            <img src="images/cul4.jpeg" alt="">
+            <img src="images/cul5.jpeg" alt="">
+            <img src="images/cul3.jpeg" alt="">
+            <img src="images/cul4.jpeg" alt="">
+            <img src="images/cul5.jpeg" alt="">
+            <img src="images/cul5.jpeg" alt="">
+          </div>
+          <a href="https://www.gorillatrips.net/uganda-cultural-diversity-practices/"><button class="btn">More</button></a>
+        </div>
+
+        <div class="national-parks">
+        </li>
+          <li><strong>Adventure Activities:</strong> Uganda offers a range of adventure activities, including white-water rafting on the Nile River, trekking in the mountains, and birdwatching.
+         </li>
+          <p>Uganda is a paradise for adventure seekers, offering thrilling activities in stunning natural settings. White-water rafting on the Nile River near Jinja is an adrenaline-pumping experience, with rapids ranging from Class II to V. For those seeking a unique challenge, trekking to see the rare mountain gorillas in Bwindi Impenetrable National Park is a once-in-a-lifetime experience. Hiking in the Rwenzori Mountains, known as the "Mountains of the Moon," offers breathtaking views and diverse ecosystems. Birdwatching enthusiasts can explore wetlands, savannahs, and forests to spot over 1,000 bird species, including the elusive shoebill stork. Uganda’s diverse landscapes provide endless opportunities for adventure and exploration.</p>
+         <div class="img-container">
+           <img src="images/adv1.jpeg" alt="">
+           <img src="images/adv2.jpeg" alt="">
+           <img src="images/adv3.jpeg" alt="">
+           <img src="images/adv4.jpeg" alt="">
+           <img src="images/adv5.jpeg" alt="">
+           <img src="images/adv3.jpeg" alt="">
+           <img src="images/adv4.jpeg" alt="">
+           <img src="images/adv5.jpeg" alt="">
+           <img src="images/adv5.jpeg" alt="">
+         </div>
+         <a href="https://exploreuganda.com
+         "><button class="btn">More</button></a>
+        </div>
+
+        <div class="national-parks">
+          <li><strong>Beautiful Landscapes:</strong> From the Rwenzori Mountains to Lake Victoria, Uganda boasts stunning natural beauty.</li>
+          <p>Uganda’s landscapes are a breathtaking blend of mountains, lakes, and lush greenery. The Rwenzori Mountains, often shrouded in mist, offer dramatic peaks and unique flora. Lake Victoria, the largest lake in Africa, is dotted with islands and vibrant fishing communities. The Albertine Rift showcases stunning valleys and escarpments, while the vast savannahs of Queen Elizabeth National Park are home to diverse wildlife. The serene beauty of Lake Bunyonyi, surrounded by terraced hills, provides a tranquil escape. Uganda’s landscapes are not just visually stunning; they also support rich biodiversity and cultural heritage, making them a true treasure for nature lovers.</p>
+          <div class="img-container">
+            <img src="images/land1.jpeg" alt="">
+            <img src="images/land2.jpeg" alt="">
+            <img src="images/land3.jpeg" alt="">
+            <img src="images/land4.jpeg" alt="">
+            <img src="images/land5.jpeg" alt="">
+            <img src="images/land3.jpeg" alt="">
+            <img src="images/land4.jpeg" alt="">
+            <img src="images/land5.jpeg" alt="">
+            <img src="images/land5.jpeg" alt="">
+          </div>
+          <a href="https://skpsug.com"><button class="btn">More</button></a>
+        </div>
+
+        </ul>
+      </div>
+      <footer style="text-align: center; padding: px; background-color: #ffafcc; color: white; position: fixed; bottom: 0; width: 100%;">
+        <p>&copy; 2025 Uganda Tourism. All rights reserved.</p>
+        <p>Follow us on social media: 
+          <a href="https://www.facebook.com/UgTourismBoard/" style="color: white; text-decoration: underline;">Facebook</a> | 
+          <a href="https://x.com/TourismBoardUg?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="color: white; text-decoration: underline;">Twitter</a> | 
+          <a href="https://www.instagram.com/uganda_tourism_board/" style="color: white; text-decoration: underline;">Instagram</a>
+  </body>
+  <script>
+   document.getElementById('home').onclick = function() {
+      document.getElementById('content').innerHTML = "<h2>Home</h2> <h4>Welcome to Uganda Tourism Board! Discover the beauty of Uganda's landscapes, wildlife, and culture.</h4>";
+    };
+
+    document.getElementById('explore').onclick = function() {
+      document.getElementById('content').innerHTML = "<h2>Explore</h2> <h4>Explore Uganda’s national parks, lakes, mountains, and vibrant cities. Adventure awaits you at every corner!</h4>";
+    };
+
+    document.getElementById('discover').onclick = function() {
+      document.getElementById('content').innerHTML = "<h2>Discover</h2> <h4>Discover the hidden gems of Uganda, from gorilla trekking in Bwindi to rafting on the Nile River in Jinja.</h4>";
+    };
+
+    document.getElementById('contact').onclick = function() {
+      document.getElementById('content').innerHTML = "<h2>Contact</h2> <h4>Contact Uganda Tourism Board for travel tips, tour packages, and visitor support. We’re here to help you plan your dream trip!</h4>";
+    };
+  </script>
+</html>
